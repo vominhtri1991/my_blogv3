@@ -1,0 +1,39 @@
+  {% load static %}
+  
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'my_blog:myblog' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'my_blog:about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% static 'pdf/CV_VoMinhTri.pdf' %}">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'my_blog:contact' %}">Contact</a>
+          </li>
+          
+         <li class="nav-item dropdown">
+        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Topic
+        <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li class="nav-link"><a href="/blog/topic/1">Linux-Unix</a></li>
+          <li class="nav-link"><a href="/blog/topic/2">VMWare</a></li>
+          <li class="nav-link"><a href="/blog/topic/3">Window Server</a></li>
+          <li class="nav-link"><a href="/blog/topic/4">Python</a></li>
+          <li class="nav-link"><a href="/blog/topic/5">Ebook</a></li>
+          <li class="nav-link"><a href="/blog/topic/6">Others</a></li>
+        </ul>
+      </li>
+            
+          <form class="navbar-form navbar-left" action="{% url 'my_blog:search' %}">
+      <div class="form-group">
+        <input type="text" class="form-control" name='keyword' placeholder="Search">
+      </div>
+      
+    </form>
+        </ul>
+      </div>  
+
